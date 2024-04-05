@@ -5,21 +5,20 @@ subgraphs:
   #   # a) Specify a schema to introspect by file OR
   #   schema:
   #     file: ../schemas/subgraph-a.graphqls
+  # b) Specify introspection to introspect on a running subgraph
+  #   introspection:
+  #     url: http://localhost:3003/postsandauthors
+  #   headers:
+  #     Authorization: 'Bearer YOUR_TOKEN_HERE'
   - name: postsandauthors
     routing_url: http://localhost:3003/postsandauthors
-    # b) Specify introspection to introspect on a running subgraph
     introspection:
       url: http://localhost:3003/postsandauthors
-      # headers:
-      #   Authorization: 'Bearer YOUR_TOKEN_HERE'
   - name: images
     routing_url: http://localhost:3004/images
-    # b) Specify introspection to introspect on a running subgraph
     introspection:
       url: http://localhost:3004/images
-
   - name: tags
     routing_url: http://localhost:3005/tags
-    # b) Specify introspection to introspect on a running subgraph
     introspection:
       url: http://localhost:3005/tags
